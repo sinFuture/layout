@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section,
+        table {
+            margin-bottom: 10px;
+            background-color: chocolate;
+            min-height: 100px;
+        }
+
+        section article,
+        td {
+            line-height: 100px;
+            padding: 0 10px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline-block+text-align -->
+    <!-- 兼容性好，ie6，ie7也可以兼容 -->
+    <!-- 缺点：parent的text-align会使得demo的文字居中，有时候我们希望demo的文字不是水平居中，这时候就需要额外的代码使得demo中的文字水平居左或者居右。 -->
+    <section class="m-inline-block">
+        <style>
+            .m-inline-block {
+                text-align: center;
+            }
+
+            .m-inline-block .m-layout {
+                display: inline-block;
+            }
+        </style>
+        <article class="m-layout">
+            水平居中对齐
+        </article>
+    </section>
+
+    <!-- table+margin -->
+    <!-- 优点：只设置了child，不用管parent ie8以上都是支持 -->
+    <!-- 兼容ie6，ie7：把结构换成table -->
+    <section class="m-table">
+        <style>
+            .m-table .m-layout {
+                display: table;
+                margin: 0 auto;
+            }
+        </style>
+        <article class="m-layout">
+            水平居中对齐
+        </article>
+    </section>
+    <!-- 亲测支持ie6，ie7 -->
+    <div>
+        <style>
+            div {
+                width: 100%;
+                background-color: chocolate;
+                min-height: 100px;
+            }
+
+            .m-layout {
+                margin: 0 auto;
+            }
+        </style>
+        <table class="m-layout">
+            <tr>
+                <td>水平居中对齐</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- absolute+transform -->
+    <!-- 优点：居中的元素不会对其他元素产生影响，原因绝对定位是脱离文档流的 -->
+    <!-- transform：ie6，ie7，ie8不兼容,高级浏览器需要一些前缀 -->
+    <section class="m-absolute">
+        <style>
+            .m-absolute {
+                position: relative;
+            }
+
+            .m-absolute .m-layout {
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+        </style>
+        <article class="m-layout">
+            水平居中对齐
+        </article>
+    </section>
+    <!-- flex -->
+    <!-- 主需要设置section 优点 缺点 flex ie6，7，8, 9不支持 -->
+    <section class="m-flex">
+        <style>
+            .m-flex {
+                display: table-cell;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+        <article class="m-layout">
+            水平居中对齐
+        </article>
+    </section>
+
+    <section class="m-grid">
+
+    </section>
+</body>
+
+</html>
