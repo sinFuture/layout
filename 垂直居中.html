@@ -12,6 +12,7 @@
             height: 300px;
             background-color: chocolate;
             text-align: center;
+            margin-top:10px;
         }
 
         .m-layout {
@@ -64,13 +65,31 @@
             垂直居中布局
         </article>
     </section>
-
+    <!-- absolute+transform -->
     <section class="m-flex">
         <style>
             .m-flex{
                 display:flex;
                 align-items:center;
                 margin-top:20px
+            }
+        </style>
+        <article class="m-layout">
+            垂直居中布局
+        </article>
+    </section>
+
+    <!-- grid -->
+    <section class="m-grid">
+        <style>
+            .m-grid{
+                display: grid;
+                align-items: center;
+                /* align-content: center; */
+            }
+            .m-grid .m-layout{
+                /* align-self: center; */
+                /* margin:auto 0; */
             }
         </style>
         <article class="m-layout">
