@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main example1">
+        <style>
+            .example1 {
+                display: inline-grid;
+                width: 200px;
+            }
+
+            .example1 div {
+                text-align: center;
+                background-color: coral;
+                color: white;
+                margin-bottom: 10px;
+                height: 50px;
+                line-height: 50px;
+            }
+        </style>
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+
+    <div class="main example2">
+        <style>
+            .example2 {
+                display: grid;
+                /* grid-template-rows: 50px 100px; */
+                /* grid-template-columns: 90px 50px 120px; */
+                /* grid-template-columns: 1fr 1fr 2fr; */            
+                /* grid-template-columns: 3rem 25% 1fr 2fr; */
+                /* grid-template-rows:minmax(100px,auto);
+                grid-template-columns:minmax(auto, 50%) 1fr 3em; */
+
+                grid-template-rows:repeat(4,100px);
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: 30px repeat(3, 1fr) 30px;
+                grid-gap:4px;
+            }
+
+            .example2 div {
+                text-align: center;
+                background-color: coral;
+                color: white;
+            }
+        </style>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+
+</html>

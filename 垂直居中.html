@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直居中</title>
+    <style>
+        section, .m-table-ie8 {
+            width: 200px;
+            height: 300px;
+            background-color: chocolate;
+            text-align: center;
+        }
+
+        .m-layout {
+            width:100%;
+            padding:10px 0;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table+vertical-align -->
+    <section class="m-table">
+        <style>
+            .m-table {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        </style>
+        <article class="m-layout">
+            垂直居中布局
+        </article>
+    </section>
+    <!-- 支持到ie8 -->
+    <div class="m-table-ie8">
+        <style>
+            .m-table-ie8 {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        </style>
+        <div class="m-layout">
+            垂直居中布局
+        </div>
+    </div>
+
+    <!-- absolute+transform -->
+    <section class="m-absolute">
+        <style>
+            .m-absolute {
+                position:relative;
+            }
+            .m-absolute .m-layout{
+                position:absolute;
+                top:50%;
+                transform:translateY(-50%);
+            }
+        </style>
+        <article class="m-layout">
+            垂直居中布局
+        </article>
+    </section>
+
+    <section class="m-flex">
+        <style>
+            .m-flex{
+                display:flex;
+                align-items:center;
+                margin-top:20px
+            }
+        </style>
+        <article class="m-layout">
+            垂直居中布局
+        </article>
+    </section>
+</body>
+
+</html>
