@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>一列不定宽与一列自适应</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0
+    }
+  </style>
+</head>
+
+<body>
+  <!-- float+overflow -->
+  <section class="m-float-overflow">
+    <style>
+      .m-float-overflow {
+        text-align: center;
+      }
+
+      .m-float-overflow .m-left {
+        float: left;
+        background-color: cadetblue;
+        margin-right: 10px;
+        padding: 0 20px;
+      }
+
+      .m-float-overflow .m-right {
+        overflow: hidden;
+        background-color: chocolate;
+      }
+    </style>
+    <div class="m-left">
+      <p>left</p>
+      <p>left</p>
+      <p>left</p>
+    </div>
+    <div class="m-right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </section>
+
+  <!-- table -->
+  <section class="m-table">
+    <style>
+      .m-table {
+        display: table;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .m-table .m-left {
+        display: table-cell;
+        width: 0.1%;
+        padding-right: 10px;
+      }
+
+      .m-table .m-left p {
+        background-color: cadetblue;
+        padding: 0 20px;
+      }
+
+      .m-table .m-right {
+        display: table-cell;
+        background-color: chocolate;
+      }
+    </style>
+    <div class="m-left">
+      <p>left</p>
+      <p>left</p>
+      <p>left</p>
+    </div>
+    <div class="m-right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </section>
+
+  <!-- flex -->
+  <section class="m-flex">
+    <style>
+      .m-flex {
+        display: flex;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .m-flex .m-left {
+        background-color: cadetblue;
+        padding: 0 20px;
+        margin-right: 10px;
+      }
+
+      .m-flex .m-right {
+        background-color: chocolate;
+        flex: 1;
+      }
+    </style>
+    <div class="m-left">
+      <p>left</p>
+      <p>left</p>
+      <p>left</p>
+    </div>
+    <div class="m-right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </section>
+
+  <!-- grid -->
+  <section class="m-grid">
+    <style>
+      .m-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .m-grid .m-left {
+        background-color: cadetblue;
+      }
+
+      .m-grid .m-right {
+        background-color: chocolate;
+      }
+    </style>
+    <div class="m-left">
+      <p>left</p>
+      <p>left</p>
+      <p>left</p>
+    </div>
+    <div class="m-right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </section>
+</body>
+
+</html>
