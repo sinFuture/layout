@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>等高布局</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- float -->
+  <section class="m-float">
+    <style>
+      .m-float{
+        overflow: hidden;
+      }
+      .m-float .m-left {
+        width: 100px;
+        float:left;
+        background-color: aquamarine;
+        margin-right: 10px;
+      }
+      .m-float .m-right {
+        overflow: hidden;
+        background-color: bisque;
+      }
+      .m-float .m-left,.m-float .m-right{
+        padding-bottom:9999px;
+        margin-bottom:-9999px;
+      }
+    </style>
+
+    <div class="m-left">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-right">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+  <!-- table -->
+  <section class="m-table">
+    <style>
+      .m-table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .m-table .m-left,
+      .m-table .m-right {
+        display: table-cell;
+        border: 1px solid #ccc;
+        /* background-color: darkgreen; */
+      }
+
+      .m-table .m-left p,
+      .m-table .m-right {
+        background-color: cadetblue;
+      }
+
+      .m-table .m-left {
+        width: 100px;
+        padding-right: 10px;
+      }
+    </style>
+    <div class="m-left">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-right">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+
+  <!-- flex -->
+  <section class="m-flex">
+    <style>
+      .m-flex {
+        display: flex;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .m-flex .m-left,
+      .m-flex .m-right {
+        flex: 1;
+      }
+
+      .m-flex .m-left {
+        background-color: antiquewhite;
+        margin-right: 10px;
+      }
+
+      .m-flex .m-right {
+        background-color: cadetblue;
+      }
+
+      .m-flex div p {
+        padding: 10px 0;
+      }
+    </style>
+    <div class="m-left">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-right">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+
+  <!-- grid -->
+  <section class="m-grid">
+    <style>
+      .m-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        text-align: center;
+        margin-top: 10px;
+        grid-column-gap: 10px;
+      }
+
+      .m-grid .m-left {
+        background-color: antiquewhite;
+      }
+
+      .m-grid .m-right {
+        background-color: cadetblue;
+      }
+
+      .m-grid p {
+        padding: 10px 0;
+      }
+    </style>
+    <div class="m-left">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-right">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+</body>
+
+</html>
