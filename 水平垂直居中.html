@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>水平垂直居中</title>
+</head>
+
+<body>
+  <!-- inline-block+text-align+table-cell+vertical-align -->
+  <section class="m-inline-align">
+    <style>
+      .m-inline-align {
+        background-color: bisque;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        height: 300px;
+        width: 300px;
+      }
+
+      .m-inline-align .m-content {
+        display: inline-block;
+        background-color: cadetblue;
+      }
+
+      .m-inline-align .m-content p {
+        padding: 10px;
+      }
+    </style>
+    <div class="m-content">
+      <p>content</p>
+    </div>
+  </section>
+
+
+  <!-- absolute+transform+translate -->
+  <section class="m-absolute-transform">
+    <style>
+      .m-absolute-transform {
+        position: relative;
+        background-color: bisque;
+        width: 200px;
+        height: 200px;
+      }
+
+      .m-absolute-transform .m-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: cadetblue;
+      }
+
+      .m-absolute-transform .m-content p {
+        padding: 10px;
+      }
+    </style>
+
+    <div class="m-content">
+      <p>content</p>
+    </div>
+  </section>
+
+  <!-- flex -->
+  <section class="m-flex">
+    <style>
+      .m-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: bisque;
+        height: 200px;
+        width: 200px;
+        margin-top: 10px;
+      }
+
+      .m-content {
+        background-color: cadetblue;
+      }
+
+      .m-content p {
+        padding: 10px;
+      }
+    </style>
+    <div class="m-content">
+      <p>content</p>
+    </div>
+  </section>
+
+  <!-- grid -->
+  <section class="m-grid">
+    <style>
+      .m-grid {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: bisque;
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+      }
+
+      .m-content {
+        background-color: cadetblue;
+        /* margin:0 auto; */
+      }
+
+      .m-content p {
+        padding: 10px;
+      }
+    </style>
+    <div class="m-content">
+      <p>content</p>
+    </div>
+  </section>
+</body>
+
+</html>
