@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>等宽布局</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- float -->
+  <section class="m-float">
+    <style>
+      .m-float{
+        margin-left: -10px;
+        text-align: center;
+      }
+      .m-float .m-common{
+        float:left;
+        width:25%;
+        padding-left:10px;
+        box-sizing: border-box;
+      }
+      .m-float .m-common p{
+        background-color: cadetblue;
+      }
+    </style>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+  
+  <!-- table -->
+  <section class="m-table">
+    <div class="m-content">
+      <style>
+        .m-table {
+          margin-left: -10px;
+        }
+
+        .m-content {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+          text-align: center;
+        }
+
+        .m-content .m-common {
+          display: table-cell;
+          padding-left: 10px;
+        }
+
+        .m-content .m-common p {
+          background-color: chocolate;
+          padding: 10px 0;
+        }
+      </style>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+      <div class="m-common">
+        <p>content</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- flex -->
+  <section class="m-flex">
+    <style>
+      .m-flex {
+        display: flex;
+        text-align: center;
+      }
+
+      .m-common {
+        background-color: bisque;
+        flex: 1;
+      }
+
+      .m-common+.m-common {
+        margin-left: 10px;
+      }
+    </style>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+
+  <!-- grid -->
+  <section class="m-grid">
+    <style>
+      .m-grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-auto-columns: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .m-grid .m-common {
+        background-color: bisque;
+      }
+    </style>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="m-common">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>
